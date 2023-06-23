@@ -2,18 +2,18 @@ import random, string
 from colorama import init, Fore
 import webbrowser
 
-print("It will only generate nitro for you, you need checker to check them find them online.\n")
-print("We do not allow copies of this generator, we don't recommend making a video on it, we will take it down.\n")
-input("Press enter if you agree to this, program will start\n")
+print("Ele só vai gerar nitro para você, você precisa de verificador para verificá-los encontrá-los on-line.\n")
+print("Não permitimos cópias deste gerador, não recomendamos fazer um vídeo nele, vamos retirá-lo.\n")
+input("Pressione enter se você concordar com isso, o programa será iniciado\n")
 
 
-num = input('Input How Many Codes to Generate: ')
+num = input('Insira quantos códigos gerar: ')
 charSet = f"{string.ascii_uppercase}{string.digits}{string.ascii_lowercase}"
 bigStr = ""
 
 with open("Nitro Codes.txt","w", encoding='utf-8') as file:
 
-    print(f'{Fore.BLUE}Wait, Generating for you!')
+    print(f'{Fore.BLUE}Aguarde, gerando para você!')
 
     for i in range(int(num)):
         bigStr += f'https://discord.gift/{"".join(random.choices(charSet, k = 16))}\n'
@@ -22,5 +22,5 @@ with open("Nitro Codes.txt","w", encoding='utf-8') as file:
             bigStr = ""
 
 
-    print(f'{Fore.CYAN}Successfully, generated they are in Nitro Codes.txt"')
-    input("Press Enter To Close!")
+    print(f'{Fore.CYAN}Com sucesso, eles são gerados em Nitro Codes.txt"')
+    input("Pressione Enter para fechar!")
